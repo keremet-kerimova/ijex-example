@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import './App.css';
+import Albums from './components/Albums/Albums';
 import Coments from './components/Coments/Coments';
 import Posts from './components/Posts/Posts';
 
@@ -13,6 +14,7 @@ function App() {
       <button onClick={() => setMessage("Bye")}>Toggle</button>
       <Posts message={message} />
       <Coments />
+      <Albums  photos={setSelectedAlbum} />
     </div>
   );
 }
