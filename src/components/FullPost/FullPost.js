@@ -5,7 +5,7 @@ import classes from "./FullPost.module.css";
 import Author from "../Author/Author";
 
 const FullPost = ({ id }) => {
-  const [post, setPost] = useState({
+  const [post, setPost , SetuserId] = useState({
     title: "Loading...",
     body: "Wait for it!",
     userId:0
@@ -22,9 +22,9 @@ const FullPost = ({ id }) => {
   return (
     <div className={classes.FullPost}>
       <h1>{post.title}</h1>
-      <p>{post.body}</p>
-      <Coments postId={id} />
-      <Author userId={ post.userId }
+     <p>{post.body}</p>
+     <Coments postId={id} />
+    <Author userId={ post.userId } />
     </div>
   );
 }
